@@ -1,0 +1,25 @@
+{
+    "name": "jf-server-markdown",
+    "description": "Handler for jfServer: Parse all markdown files and returns HTML.",
+    "version": "0.1.0",
+    "author": "Joaquín Fernández <public@joaquinfernandez.net>",
+    "license": "MIT",
+    "main": "index.js",
+    "homepage": "https://github.com/joaquinfq/jfServerMarkdown#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/joaquinfq/jfServerMarkdown.git"
+    },
+    "bugs": {
+        "url": "https://github.com/joaquinfq/jfServerMarkdown/issues"
+    },
+    "scripts": {
+        "test": "node test.js"
+    },
+    "dependencies": {
+        "remark": "^9.0.0",
+        "remark-highlight.js": "^5.0.0",
+        "remark-html": "^7.0.0",
+        "remark-slug": "^5.0.0"
+    }
+}
