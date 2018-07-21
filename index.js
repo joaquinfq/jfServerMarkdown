@@ -1,16 +1,17 @@
-const jfServerMethodGet = require('jf-server/src/method/Get');
-const remark            = require('remark');
-const html              = require('remark-html');
-const highlight         = require('remark-highlight.js');
-const slug              = require('remark-slug');
+const jfServerHandlerGet = require('jf-server/src/handler/Get');
+const remark             = require('remark');
+const html               = require('remark-html');
+const highlight          = require('remark-highlight.js');
+const slug               = require('remark-slug');
+const style              = require('path').join(__dirname, 'style.css');
 /**
  * Clase para procesar los archivos `.md` en el servidor.
  *
  * @namespace jf.server
  * @class     jf.server.Markdown
- * @extends   jf.server.method.Base
+ * @extends   jf.server.handler.Base
  */
-module.exports = class jfServerMarkdown extends jfServerMethodGet
+module.exports = class jfServerMarkdown extends jfServerHandlerGet
 {
     /**
      * Extensiones que gestiona la clase.
@@ -32,6 +33,7 @@ module.exports = class jfServerMarkdown extends jfServerMethodGet
         const _content = _page.content;
         if (_content)
         {
+            _page.css.push(style);
             _page.content      = null;
             _page.options.body = await this.buildHtml(_content, filename);
             this._buildTypeFromFile(filename + '.html');
