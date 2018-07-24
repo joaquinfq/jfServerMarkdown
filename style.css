@@ -58,13 +58,15 @@ h1, h2, h3 {
 }
 
 h1 {
-    font-size : 2em;
-    margin    : 0.67em 0;
+    border-bottom : 2px solid #423F37;
+    font-size     : 2em;
+    margin        : 0.67em 0;
 }
 
 h2 {
-    font-size : 1.5em;
-    margin    : 0.83em 0;
+    border-bottom : 1px solid #ccc;
+    font-size     : 1.5em;
+    margin        : 0.83em 0;
 }
 
 h3, dt {
@@ -88,15 +90,17 @@ h6 {
 }
 
 a {
-    color           : #8DB359;
+    color           : #003366;
     cursor          : pointer;
     outline         : 0 none;
-    text-decoration : underline;
+    text-decoration : none;
+    transition      : 0.4s ease-in;
 }
 
 a:hover {
-    outline : 0 none;
-    color   : #739544;
+    color      : #6699CC;
+    outline    : 0 none;
+    transition : color 0.4s ease-out;
 }
 
 aside {
@@ -154,6 +158,7 @@ p, pre {
 
 pre {
     background-color : #F8F5F0;
+    border-radius    : 5px;
     overflow-x       : auto;
     padding          : 5px;
     position         : relative;
@@ -162,7 +167,7 @@ pre {
 }
 
 ol > li:before {
-    color             : #423F37;
+    color             : #AAA;
     content           : counter(ol, decimal) ".";
     counter-increment : ol;
     font-weight       : 700;
@@ -172,7 +177,7 @@ ol > li:before {
 }
 
 ul > li:before {
-    background-color : #423F37;
+    background-color : #AAA;
     border-radius    : 14px 14px 14px 14px;
     content          : "";
     height           : 6px;

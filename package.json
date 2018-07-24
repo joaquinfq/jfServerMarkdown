@@ -1,7 +1,7 @@
 {
     "name": "jf-server-markdown",
     "description": "Handler for jfServer: Parse all markdown files and returns HTML.",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "author": "Joaquín Fernández <public@joaquinfernandez.net>",
     "license": "MIT",
     "main": "index.js",
